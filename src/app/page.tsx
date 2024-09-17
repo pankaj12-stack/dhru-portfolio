@@ -97,6 +97,29 @@ export default function Page() {
           ))}
         </div>
       </section>
+      <section id="certifications">
+        <div className="flex min-h-0 flex-col gap-y-3">
+          <BlurFade delay={BLUR_FADE_DELAY * 7}>
+            <h2 className="text-xl font-bold">Certifications</h2>
+          </BlurFade>
+          {DATA.certifications.map((certifications, id) => (
+            <BlurFade
+              key={certifications.certificate}
+              delay={BLUR_FADE_DELAY * 8 + id * 0.05}
+            >
+              <ResumeCard
+                key={certifications.certificate}
+                href={certifications.href}
+                logoUrl={certifications.logoUrl}
+                altText={certifications.certificate}
+                title={certifications.certificate}
+                subtitle={certifications.desc}
+                period={`${certifications.year}`}
+              />
+            </BlurFade>
+          ))}
+        </div>
+      </section>
       <section id="skills">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 9}>

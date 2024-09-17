@@ -1,5 +1,4 @@
 import { Icons } from "@/components/icons";
-import { Certificate } from "crypto";
 import { HomeIcon, NotebookIcon } from "lucide-react";
 
 export const DATA = {
